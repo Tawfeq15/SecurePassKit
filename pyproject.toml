@@ -1,0 +1,17 @@
+[project]
+name = "passwordforge"
+version = "0.1.0"
+description = "Password strength checker + generator + suggestions, with privacy-preserving reuse fingerprints and report attestations."
+requires-python = ">=3.9"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.23",
+  "pydantic>=2.6",
+  "cryptography>=42.0",
+]
+
+[project.scripts]
+passwordforge = "passwordforge.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
